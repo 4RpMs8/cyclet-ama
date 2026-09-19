@@ -18,51 +18,57 @@
     <link rel="stylesheet" href="CSS/main-buttons.css">
     <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="CSS/footer.css">
-        <link rel="stylesheet" href="CSS/accountDrawer.css">
+    <link rel="stylesheet" href="CSS/accountDrawer.css">
 
 
 
 </head>
 
-<div class="account-drawer" id="accountDrawer">
-    <button class="account-class" id="accountClass">X</button>
-    <h2>My Account</h2>
-    <div class="account-menu">
-        <a href="#">
-            <i class="fa-solid fa-user"></i>
-            User Information
-
-        </a>
-        <a href="#">
-            <i class="fa-solid fa-box"></i>
-            Order Tracking
-
-        </a>
-        <a href="#">
-            <i class="fa-solid fa-star"></i>
-            submit a Review
-
-        </a>
-        <a href="#">
-            <i class="fa-solid fa-file-line"></i>
-            My Requests
-
-        </a>
-        <a href="#">
-            <i class="fa-solid fa-gear"></i>
-            Settings
-
-        </a>
-    </div>
-
-    <button class="account-logout">
-        <i class="fa-solid fa-right-form-bracket"></i>
-        Log Out
-    </button>
-
-</div>
 
 <body>
+
+    <button class="open-account" id="openAccount">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="account-drawer" id="accountDrawer">
+        <button class="account-close" id="accountClose">X</button>
+        <h2>My Account</h2>
+        <div class="account-menu">
+            <a href="#">
+                <i class="fa-solid fa-user"></i>
+                User Information
+
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-box"></i>
+                Order Tracking
+
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-star"></i>
+                submit a Review
+
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-file-lines"></i>
+                My Requests
+
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+
+            </a>
+        </div>
+
+        <button class="account-logout">
+            <i class="fa-solid fa-right-form-bracket"></i>
+            Log Out
+        </button>
+
+    </div>
 
     <header>
         <nav class="navbar">
@@ -409,8 +415,10 @@
         });
 
     </script>
+    <script src="js/account-bar.js"></script>
 
 </body>
+
 
 <style>
     @media (max-width: 600px) {
