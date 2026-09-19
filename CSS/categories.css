@@ -1,0 +1,44 @@
+.categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.categories li {
+  background: #1e1e2f;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #2e2e45;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.categories li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: #ff5722; 
+  transition: width 0.3s ease;
+}
+
+.categories li:hover {
+  background: #2a2a40;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(255, 87, 34, 0.2);
+}
+
+.categories li:hover::before {
+  width: 100%;
+  opacity: 0.1;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | SICKLET AMA</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/product-card.css">
+    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/products-page.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <style>
+        header {
+            font-family: inter;
+            font-size: 40px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="links">
+            <a href="#">
+                <i class="fa-solid fa-house"></i>
+                Home</a>
+            <a href="#products">
+                <i class="fa-solid fa-box"></i>
+                Products</a>
+            <a href="#about">
+                <i class="fa-solid fa-circle-info"></i>
+                About us</a>
+            <a href="#news">
+                <i class="fa-solid fa-newspaper"></i>
+                News</a>
+            <a href="#contact">
+                <i class="fa-solid fa-phone"></i>
+                Contact</a>
+
+        </div>
+
+
+        <img src="../assets/images/c-a.png" alt="arm">
+
+    </nav>
+
+    <main class="page-container">
+
+        <div class="page-header">
+            <h1>Our Products</h1>
+            <p>High-quality motorcycle parts for every need</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <input type="text" placeholder="Search products..." class="search-input">
+            <select class="filter-select">
+                <option value="">All Categories</option>
+                <option value="engine">Engine Parts</option>
+                <option value="brake">Brake System</option>
+                <option value="clutch">Clutch Parts</option>
+                <option value="electrical">Electrical Parts</option>
+            </select>
+            <select class="filter-select">
+                <option value="">Sort by</option>
+                <option value="name">Name</option>
+                <option value="newest">Newest</option>
+            </select>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid">
+
+            <a href="../pages/porduct-detail.html" class="product-link">
+                <div class="product-card">
+                    <img src="../assets/images/Oil Pump.jfif" alt="Oil Pump">
+                    <div class="product-overlay">
+                        <h3>Oil Pump</h3>
+                        <p>High quality motorcycle oil pump.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="product-detail.html" class="product-link">
+                <div class="product-card">
+                    <img src="../assets/images/Brake Disc.jfif" alt="Brake Disc">
+                    <div class="product-overlay">
+                        <h3>Brake Disc</h3>
+                        <p>Durable brake disc for motorcycles.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="product-detail.html" class="product-link">
+                <div class="product-card">
+                    <img src="../assets/images/Cluch Plate.webp" alt="Clutch Plate">
+                    <div class="product-overlay">
+                        <h3>Clutch Plate</h3>
+                        <p>Reliable clutch plate for motorcycle engine.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="product-detail.html" class="product-link">
+                <div class="product-card">
+                    <img src="../assets/images/Air Filter.jfif" alt="Air Filter">
+                    <div class="product-overlay">
+                        <h3>Air Filter</h3>
+                        <p>High quality air filter.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="product-detail.html" class="product-link">
+                <div class="product-card">
+                    <img src="../assets/images/Piston.webp" alt="Piston">
+                    <div class="product-overlay">
+                        <h3>Piston</h3>
+                        <p>Durable engine piston.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="product-detail.html" class="product-link">
+                <div class="product-card">
+                    <img src="../assets/images/Brake Pad.jpg" alt="Brake Pad">
+                    <div class="product-overlay">
+                        <h3>Brake Pad</h3>
+                        <p>Reliable motorcycle brake pad.</p>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">→</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2026 SICKLET AMA. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

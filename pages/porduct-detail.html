@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oil Pump | SICKLET AMA</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/Navbar.css">
+    <link rel="stylesheet" href="../CSS/product-detail.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="links">
+                <a href="../index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="products.html"><i class="fa-solid fa-box"></i> Products</a>
+                <a href="../index.html#about"><i class="fa-solid fa-circle-info"></i> About us</a>
+                <a href="news.html"><i class="fa-solid fa-newspaper"></i> News</a>
+                <a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+            </div>
+            <img src="../assets/images/c-a.png" alt="arm">
+        </nav>
+    </header>
+
+    <main class="page-container">
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a>
+            <span>/</span>
+            <a href="products.html">Products</a>
+            <span>/</span>
+            <span class="current">Oil Pump</span>
+        </div>
+
+        <!-- ========== PRODUCT MAIN ========== -->
+        <section class="product-main">
+
+            <!-- Gallery -->
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img id="mainProductImage"
+                         class="mainProductImage"
+                         src="../assets/images/Oil Pump.jfif"
+                         alt="Oil Pump">
+                </div>
+
+                <div class="thumbnail-images">
+                    <img class="thumbnail active" src="../assets/images/Oil Pump.jfif" alt="View 1">
+                    <img class="thumbnail" src="../assets/images/Oil Pump.jfif" alt="View 2">
+                    <img class="thumbnail" src="../assets/images/Oil Pump.jfif" alt="View 3">
+                    <img class="thumbnail" src="../assets/images/Oil Pump.jfif" alt="View 4">
+                    <img class="thumbnail" src="../assets/images/Oil Pump.jfif" alt="View 5">
+                </div>
+            </div>
+
+            <!-- Info -->
+            <div class="product-info">
+                <h1 class="product-title">Oil Pump</h1>
+                <p class="product-subtitle">High quality motorcycle oil pump.</p>
+
+                <!-- Model Selector -->
+                <div class="model-selector">
+                    <label>Choose Model:</label>
+                    <div class="model-buttons">
+                        <button class="model-button active">X100</button>
+                        <button class="model-button">X200</button>
+                        <button class="model-button">X300</button>
+                    </div>
+                </div>
+
+                <!-- Specs Table -->
+                <table class="product-table">
+                    <tr>
+                        <th>Product Code</th>
+                        <td>OP-2045</td>
+                    </tr>
+                    <tr>
+                        <th>Model</th>
+                        <td>X200</td>
+                    </tr>
+                    <tr>
+                        <th>Status</th>
+                        <td>Available</td>
+                    </tr>
+                    <tr>
+                        <th>Material</th>
+                        <td>Aluminum Alloy</td>
+                    </tr>
+                    <tr>
+                        <th>Weight (per unit)</th>
+                        <td>320g</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <th>Units per Carton</th>
+                        <td>50 pcs</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <th>Minimum Order</th>
+                        <td>5 Cartons</td>
+                    </tr>
+                    <tr>
+                        <th>Price per Carton</th>
+                        <td class="price-cell">On Request</td>
+                    </tr>
+                </table>
+
+                <a href="#quote" class="mainButtons filled quote-button">
+                    Request a Quote
+                </a>
+            </div>
+
+        </section>
+
+        <!-- ========== QUOTE FORM ========== -->
+        <section id="quote" class="quote-section">
+            <h2>Request a Quote</h2>
+
+            <!-- Carton Info Box -->
+            <div class="carton-info">
+                <div class="carton-info-item">
+                    <i class="fa-solid fa-box"></i>
+                    <span><strong>50</strong> units per carton</span>
+                </div>
+                <div class="carton-info-item">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span>Minimum <strong>5</strong> cartons</span>
+                </div>
+            </div>
+
+            <form class="quote-form" action="/api/quote-requests" method="post">
+
+                <div class="form-group">
+                    <label>Product:</label>
+                    <input type="text" value="Oil Pump (OP-2045)" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Number of Cartons *</label>
+                    <input type="number"
+                           name="cartons"
+                           id="cartons"
+                           min="5"
+                           value="5"
+                           data-units-per-carton="50"
+                           required>
+                    <small>Minimum order: 5 cartons</small>
+                </div>
+
+                <div class="form-group">
+                    <label>Total Units:</label>
+                    <input type="text" id="totalUnits" value="250 pcs" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Message:</label>
+                    <textarea name="message" rows="5"
+                              placeholder="Tell us about your requirements..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Priority:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="priority" value="normal" checked>
+                            Normal
+                        </label>
+                        <label>
+                            <input type="radio" name="priority" value="urgent">
+                            Urgent
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="mainButtons filled">
+                    Send Request
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2026 SICKLET AMA. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/zoom.js"></script>
+    <script src="../js/modelSelector.js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/quote-calculator.js"></script>
+
+</body>
+</html>

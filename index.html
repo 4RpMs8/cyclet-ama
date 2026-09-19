@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Company</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/Navbar.css">
+    <link rel="stylesheet" href="CSS/categories.css">
+    <link rel="stylesheet" href="CSS/buttons.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/product-card.css">
+    <link rel="stylesheet" href="CSS/about.css">
+    <link rel="stylesheet" href="CSS/main-buttons.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+
+
+
+</head>
+
+<div class="account-drawer" id="accountDrawer">
+    <button class="account-class" id="accountClass">X</button>
+    <h2>My Account</h2>
+    <div class="account-menu">
+        <a href="#">
+            <i class="fa-solid fa-user"></i>
+            User Information
+
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-box"></i>
+            Order Tracking
+
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-star"></i>
+            submit a Review
+
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-file-line"></i>
+            My Requests
+
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+
+        </a>
+    </div>
+
+    <button class="account-logout">
+        <i class="fa-solid fa-right-form-bracket"></i>
+        Log Out
+    </button>
+
+</div>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+            <div class="links">
+                <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    Home</a>
+                <a href="#products">
+                    <i class="fa-solid fa-box"></i>
+                    Products</a>
+                <a href="#about">
+                    <i class="fa-solid fa-circle-info"></i>
+                    About us</a>
+                <a href="#news">
+                    <i class="fa-solid fa-newspaper"></i>
+                    News</a>
+                <a href="#contact">
+                    <i class="fa-solid fa-phone"></i>
+                    Contact</a>
+
+            </div>
+
+
+            <img src="assets/images/c-a.png" alt="arm">
+
+        </nav>
+        <div class="hero-content">
+            <div class="image-box">
+                <img id="logoImage" src="assets/images/CYCLET AMA.png" alt="logo">
+            </div>
+            <h1>
+                <span>CYCLET AMA</span>
+                <p class="hero-descroption">We produce high-quality Motorcycle parts</p>
+
+            </h1>
+            <div class="buttons">
+                <button>Sign in</button>
+                <button>Login</button>
+            </div>
+        </div>
+
+
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <section id="about" class="about-section">
+
+            <!-- ===== Hero Box ===== -->
+            <div class="hero-box">
+                <div class="hero-icon">🏭</div>
+                <h1>CYCLET AMA</h1>
+                <p class="hero-sub">Specialized Engine Parts Manufacturer Since 2006</p>
+                <div class="hero-tags">
+                    <span>Mass Production</span>
+                    <span>Quality Control</span>
+                    <span>Export</span>
+                </div>
+            </div>
+
+            <!-- ===== Feature Cards ===== -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>Precision Manufacturing</h3>
+                    <p>Advanced production lines built to global standards</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Quality Control</h3>
+                    <p>Fully equipped lab, ISO-compliant testing</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚛</div>
+                    <h3>Nationwide Shipping</h3>
+                    <p>Secure packaging, delivery across the country</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Authenticity Guaranteed</h3>
+                    <p>Full warranty on every product we make</p>
+                </div>
+            </div>
+
+            <!-- ===== Stats Box ===== -->
+            <div class="stats-box">
+                <div class="stat-item">
+                    <span class="stat-number">+15</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">+500</span>
+                    <span class="stat-label">Part Models</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">+10000</span>
+                    <span class="stat-label">Active Clients</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">+20</span>
+                    <span class="stat-label">Export Countries</span>
+                </div>
+            </div>
+
+            <!-- ===== Mission Box ===== -->
+            <div class="mission-box">
+                <div class="mission-icon">🎯</div>
+                <h2>Our Mission</h2>
+                <p>"To build parts that multiply engine life — not just keep it moving."</p>
+            </div>
+
+            <!-- ===== Production Process ===== -->
+            <div class="process-box">
+                <h2 class="process-title">How a Part Is Made</h2>
+                <div class="process-flow">
+                    <div class="process-step">
+                        <div class="step-icon">🔩</div>
+                        <span>Raw Materials</span>
+                    </div>
+                    <div class="process-arrow">▶</div>
+                    <div class="process-step">
+                        <div class="step-icon">🔥</div>
+                        <span>Casting</span>
+                    </div>
+                    <div class="process-arrow">▶</div>
+                    <div class="process-step">
+                        <div class="step-icon">🔬</div>
+                        <span>Quality Testing</span>
+                    </div>
+                    <div class="process-arrow">▶</div>
+                    <div class="process-step">
+                        <div class="step-icon">📦</div>
+                        <span>Packaging</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Why Us ===== -->
+            <div class="why-box">
+                <h2>Why Choose Us?</h2>
+                <div class="why-grid">
+                    <div class="why-item">✅ Direct manufacturing, no middlemen</div>
+                    <div class="why-item">✅ Factory-direct pricing</div>
+                    <div class="why-item">✅ Custom builds from your sample</div>
+                    <div class="why-item">✅ Free technical support</div>
+                    <div class="why-item">✅ Permanent stock, always available</div>
+                    <div class="why-item">✅ Sample testing before mass production</div>
+                </div>
+            </div>
+
+            <!-- ===== CTA Box ===== -->
+            <div class="cta-box">
+                <h2>🚀 Ready to Work With You</h2>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-primary">Get a Price List</a>
+                    <a href="#" class="btn btn-outline">Contact Us</a>
+                </div>
+            </div>
+
+
+
+            <h2>Product Categories</h2>
+            <ul class="categories">
+                <li>Engine Parts</li>
+                <li>Brake System</li>
+                <li>Clutch Parts</li>
+                <li>Electrical Parts</li>
+            </ul>
+
+        </section>
+        <section id="products" class="products-section">
+            <h2 id="products">Our Products</h2>
+
+            <div class="product-wrapper">
+                <button id="prevButton">
+                    << /button>
+                        <div class="product-container">
+                            <a href="pages/oil-pump.html" class="product-link">
+                                <div class="product-card">
+                                    <img src="assets/images/Oil Pump.jfif" alt="Oil Pump">
+                                    <div class="product-overlay">
+                                        <h3>Oil Pump</h3>
+                                        <p>high quality motorcycle oil Pump.</p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="product-card" name="brake-disk">
+                                <img src="assets/images/Brake Disc.jfif" alt="Brake Disc">
+                                <div class="product-overlay">
+                                    <h3>Brake Disc</h3>
+                                    <p>Durable brake disk for motorcycles.</p>
+                                </div>
+                            </div>
+                            <div class="product-card" name="Cluch-Plate">
+                                <img src="assets/images/Cluch Plate.webp" alt="Cluch Plate">
+                                <div class="product-overlay">
+                                    <h3>Clutch Plate</h3>
+                                    <p>Reliable clutch plate for motorcycle engine</p>
+                                </div>
+                            </div>
+                            <div class="product-card" name="Air-Filter">
+                                <img src="assets/images/Air Filter.jfif" alt="Air Filter">
+                                <div class="product-overlay">
+                                    <h3>Air Filter</h3>
+                                    <p>High quality Air Filter</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="assets/images/Piston.webp" alt="Air Filter">
+                                <div class="product-overlay">
+                                    <h3>Piston</h3>
+                                    <p>Durable engine piston</p>
+                                </div>
+                            </div>
+                            <div class="product-card">
+                                <img src="assets/images/Brake Pad.jpg" alt="Air Filter">
+                                <div class="product-overlay">
+                                    <h3>Brake Pad</h3>
+                                    <p>Reliable motorcycle brake pad.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="nextButton">></button>
+
+            </div>
+
+            <div class="more-wrapper">
+                <a href="pages/products.html">
+                    <button class="mainButtons">More..</button>
+                </a>
+            </div>
+
+
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <section id="contact" class="contact-section">
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+
+                <span class="section-label">CONTACT US</span>
+
+                <h2>
+                    Let's Talk About
+                    <span>Your Requirements.</span>
+                </h2>
+
+                <p>
+                    Have a question about our products or need more
+                    information? Get in touch with the CYCLET AMA team.
+                </p>
+
+                <div class="contact-details">
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <span>Email</span>
+                            <strong>info@cycletama.com</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <span>Phone</span>
+                            <strong>+00 000 000 0000</strong>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span>Location</span>
+                            <strong>Your Company Location</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-action">
+
+                <div class="contact-card">
+
+                    <i class="fa-regular fa-comments"></i>
+
+                    <h3>Need More Information?</h3>
+
+                    <p>
+                        Contact us for product information,
+                        technical questions, or general inquiries.
+                    </p>
+
+                    <a href="contact.html" class="contact-button">
+                        Contact Us
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 CYCLET AMA. All rights reserved.</p>
+    </footer>
+    <script>
+        const container = document.querySelector(".product-container");
+        const nextButton = document.getElementById("nextButton");
+        const prevButton = document.getElementById("prevButton");
+        nextButton.addEventListener("click", function () {
+            container.scrollLeft += 300;
+        });
+        prevButton.addEventListener("click", function () {
+            container.scrollLeft -= 300;
+        });
+
+        const productCards = document.querySelectorAll(".product-card");
+        productCards.forEach(function (card) {
+            card.addEventListener("click", function () {
+                const productName = card.querySelector("h3").textContent;
+                console.log("Selected product: ", productName);
+            });
+        });
+
+    </script>
+
+</body>
+
+<style>
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 50px;
+        }
+
+        header p {
+            font-size: 14px;
+        }
+
+        .navbar {
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .navbar a {
+            font-size: 14px;
+        }
+    }
+</style>
+
+</html>

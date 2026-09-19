@@ -1,0 +1,393 @@
+/* ============================================
+   ABOUT SECTION — Engine Parts Manufacturer
+   ============================================ */
+
+.about-section {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #e5e7eb;
+  line-height: 1.7;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  box-sizing: border-box;
+}
+
+.about-section *,
+.about-section *::before,
+.about-section *::after {
+  box-sizing: border-box;
+}
+
+/* ===== Hero Box ===== */
+.about-section .hero-box {
+  background: linear-gradient(135deg, #1a1d24 0%, #242833 100%);
+  border: 1px solid #2f3441;
+  border-radius: 24px;
+  padding: 60px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section .hero-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 140, 0, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.about-section .hero-icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.about-section .hero-box h1 {
+  font-size: 40px;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 10px;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.about-section .hero-sub {
+  font-size: 18px;
+  color: #9ca3af;
+  margin: 0 0 25px;
+  position: relative;
+}
+
+.about-section .hero-tags {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.about-section .hero-tags span {
+  background: rgba(255, 140, 0, 0.15);
+  color: #ff8c00;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 140, 0, 0.3);
+}
+
+/* ===== Feature Cards ===== */
+.about-section .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.about-section .feature-card {
+  background: #1a1d24;
+  border: 1px solid #2f3441;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.about-section .feature-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff8c00;
+  box-shadow: 0 15px 40px rgba(255, 140, 0, 0.15);
+}
+
+.about-section .feature-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.about-section .feature-card:hover .feature-icon {
+  transform: scale(1.2) rotate(-8deg);
+}
+
+.about-section .feature-card h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.about-section .feature-card p {
+  color: #9ca3af;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* ===== Stats Box ===== */
+.about-section .stats-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  background: linear-gradient(135deg, #ff8c00 0%, #ff5e00 100%);
+  border-radius: 20px;
+  padding: 40px 20px;
+}
+
+.about-section .stat-item {
+  text-align: center;
+  color: #ffffff;
+}
+
+.about-section .stat-number {
+  display: block;
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.about-section .stat-label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ===== Mission Box ===== */
+.about-section .mission-box {
+  background: #1a1d24;
+  border: 1px solid #2f3441;
+  border-left: 4px solid #ff8c00;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.about-section .mission-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.about-section .mission-box h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 0 15px;
+}
+
+.about-section .mission-box p {
+  font-size: 18px;
+  color: #d1d5db;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== Production Process ===== */
+.about-section .process-box {
+  background: #1a1d24;
+  border: 1px solid #2f3441;
+  border-radius: 20px;
+  padding: 40px 25px;
+}
+
+.about-section .process-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: 22px;
+  margin: 0 0 30px;
+}
+
+.about-section .process-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;flex-wrap: wrap;
+}
+
+.about-section .process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: #242833;
+  border-radius: 16px;
+  padding: 20px 15px;
+  min-width: 120px;
+  transition: all 0.3s ease;
+}
+
+.about-section .process-step:hover {
+  background: #2f3441;
+  transform: scale(1.05);
+}
+
+.about-section .step-icon {
+  font-size: 32px;
+}
+
+.about-section .process-step span {
+  font-size: 13px;
+  color: #d1d5db;
+  font-weight: 600;
+}
+
+.about-section .process-arrow {
+  color: #ff8c00;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* ===== Why Us ===== */
+.about-section .why-box {
+  background: #1a1d24;
+  border: 1px solid #2f3441;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.about-section .why-box h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 22px;
+  margin: 0 0 25px;
+}
+
+.about-section .why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.about-section .why-item {
+  background: #242833;
+  padding: 15px 20px;
+  border-radius: 12px;
+  color: #d1d5db;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.about-section .why-item:hover {
+  border-left-color: #ff8c00;
+  background: #2f3441;
+  transform: translateX(5px);
+}
+
+/* ===== CTA Box ===== */
+.about-section .cta-box {
+  background: linear-gradient(135deg, #1a1d24 0%, #242833 100%);
+  border: 1px solid #ff8c00;
+  border-radius: 24px;
+  padding: 50px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section .cta-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 140, 0, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.about-section .cta-box h2 {
+  color: #ffffff;
+  font-size: 26px;
+  margin: 0 0 25px;
+  position: relative;
+}
+
+.about-section .cta-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.about-section .btn {
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.about-section .btn-primary {
+  background: linear-gradient(135deg, #ff8c00, #ff5e00);
+  color: #ffffff;
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.35);
+}
+
+.about-section .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(255, 140, 0, 0.5);
+}
+
+.about-section .btn-outline {
+  background: transparent;
+  color: #ff8c00;
+  border: 2px solid #ff8c00;
+}
+
+.about-section .btn-outline:hover {
+  background: #ff8c00;
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 40px 15px;
+    gap: 25px;
+  }
+
+  .about-section .hero-box {
+    padding: 40px 20px;
+  }
+
+  .about-section .hero-box h1 {
+    font-size: 28px;
+  }
+
+  .about-section .hero-icon {
+    font-size: 45px;
+  }
+
+  .about-section .stats-box {
+    padding: 30px 15px;
+  }
+
+  .about-section .stat-number {
+    font-size: 24px;
+  }
+
+  .about-section .process-arrow {
+    transform: rotate(90deg);
+  }
+
+  .about-section .mission-box,
+  .about-section .why-box,
+  .about-section .process-box {
+    padding: 30px 20px;
+  }
+
+  .about-section .cta-box {
+    padding: 35px 20px;
+  }
+
+  .about-section .cta-box h2 {
+    font-size: 20px;
+  }
+}

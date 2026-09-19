@@ -1,0 +1,64 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 2px;
+            font-size: 120px;
+            text-align: left;
+            padding-left: 0;
+            margin-left: 0;
+            color: brown;
+        }
+
+        .hero-descroption {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 5px;
+            text-align: left;
+            margin-left: 60px;
+        }
+
+        .hero-content {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+            top: -90px;
+            padding: 30px;
+            /* left: -20px; */
+        }
+
+
+
+
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: rgb(13, 9, 9);
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../assets/images/Motor2.png');
+            background-repeat: repeat;
+            background-size: 120px auto;
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+
+        }
+        

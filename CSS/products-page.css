@@ -1,0 +1,316 @@
+/* ============================================
+   Products Page - Dark Neon Edition
+   ============================================ */
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-lg);
+  padding-top: 100px;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* افکت پس‌زمینه درخشان */
+.page-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 46, 46, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* هدر با درخشش طلایی */
+.page-header {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+  position: relative;
+}
+
+.page-header h1 {
+  font-size: 60px;
+  margin-bottom: var(--space-sm);
+  color: #fff;
+  background: linear-gradient(135deg, #FFD700 0%, #FFF8DC 50%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+  animation: goldShimmer 3s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes goldShimmer {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.6))
+            drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.9))
+            drop-shadow(0 0 40px rgba(255, 215, 0, 0.6));
+  }
+}
+
+.page-header p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+/* فیلترها */
+.filters {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-input,
+.filter-select {
+  padding: var(--space-md);
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 0 10px rgba(255, 215, 0, 0.1),
+    inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  color: gold;
+  font-family: satoshi;
+  caret-color: #FFD700;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 215, 0, 0.4);
+}
+
+.search-input:focus,
+.filter-select:focus {
+  outline: none;
+  border-color: #FFD700;
+  box-shadow: 
+    0 0 15px rgba(255, 215, 0, 0.6),
+    0 0 30px rgba(255, 215, 0, 0.3),
+    inset 0 0 15px rgba(255, 215, 0, 0.1);
+  background: rgba(30, 30, 30, 0.95);
+  animation: electricPulse 0.4s ease-out;
+}
+
+@keyframes electricPulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(255, 215, 0, 0); }
+  100% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); }
+}
+
+.filter-select {
+  cursor: pointer;
+  min-width: 180px;
+  color: #FFD700;
+}
+
+.filter-select option {
+  background: #111;
+  color: #FFD700;
+}
+
+/* گرید محصولات */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.products-grid .product-card {
+  width: 100%;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* افکت برق روی کارت‌های محصول */
+.products-grid .product-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(45deg, 
+    transparent, 
+    rgba(255, 215, 0, 0.6), 
+    transparent, 
+    rgba(255, 46, 46, 0.6), 
+    transparent);
+  background-size: 300% 300%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  animation: borderFlow 3s linear infinite;
+}
+
+.products-grid .product-card:hover::before {
+  opacity: 1;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+.products-grid .product-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.4));
+}
+
+/* صفحه‌بندی */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+}
+
+.page-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: var(--radius-sm);
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  color: rgba(255, 215, 0, 0.8);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.page-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.3), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.page-btn:hover {
+  border-color: #FFD700;
+  color: #FFD700;
+  box-shadow: 
+    0 0 15px rgba(255, 215, 0, 0.6),
+    0 0 30px rgba(255, 215, 0, 0.3),
+    inset 0 0 15px rgba(255, 215, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.page-btn:hover::before {
+  opacity: 1;
+}
+
+.page-btn.active {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #000;
+  border-color: #FFD700;
+  font-weight: bold;
+  box-shadow: 
+    0 0 20px rgba(255, 215, 0, 0.8),
+    0 0 40px rgba(255, 215, 0, 0.4);
+  animation: activePulse 2s ease-in-out infinite;
+}
+
+@keyframes activePulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(255, 215, 0, 0.8),
+      0 0 40px rgba(255, 215, 0, 0.4);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(255, 215, 0, 1),
+      0 0 60px rgba(255, 215, 0, 0.6);
+  }
+}
+
+/* افکت برق‌زدن تصادفی روی صفحه */
+@keyframes lightning {
+  0%, 90%, 100% { opacity: 0; }
+  92%, 96% { opacity: 0.8; }
+  94% { opacity: 0.3; }
+}
+
+.page-container::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    rgba(255, 215, 0, 0.03) 50%, 
+    transparent 100%);
+  pointer-events: none;
+  animation: lightning 8s infinite;
+  z-index: 0;
+}
+
+/* رسپانسیو */
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 40px;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .search-input,
+  .filter-select {
+    width: 100%;
+  }
+}
+
+/* اسکرول‌بار سفارشی */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FFD700, #FFA500);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FFA500, #FFD700);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+}
+
+/* انتخاب متن */
+::selection {
+  background: rgba(255, 215, 0, 0.3);
+  color: #FFD700;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
