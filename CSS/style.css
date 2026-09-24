@@ -20,6 +20,8 @@
             margin-left: 60px;
         }
 
+
+
         .hero-content {
             position: relative;
             width: 100%;
@@ -44,6 +46,24 @@
         body {
             font-family: 'Inter', sans-serif;
             background-color: rgb(13, 9, 9);
+            position: relative;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            inset: 0;
+
+            background:
+                radial-gradient(circle at 20% 10%,
+                    rgba(255, 255, 255, 0.035),
+                    transparent 35%),
+                radial-gradient(circle at 80% 30%,
+                    rgba(255, 0, 0, 0.025),
+                    transparent 40%);
+
+            pointer-events: none;
+            z-index: 9990;
         }
 
         body::before {
@@ -59,7 +79,5 @@
             opacity: 0.5;
             z-index: -1;
             pointer-events: none;
-            z-index: 9997;
 
         }
-        
