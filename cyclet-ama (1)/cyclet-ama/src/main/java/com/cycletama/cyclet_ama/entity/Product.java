@@ -23,6 +23,10 @@ public class Product {
     private Set<Category> categories;
 
 
+    @OneToMany(mappedBy = "product")
+    private Set<ProductModel> models;
+
+
     public Long getId() {
         return id;
     }
@@ -46,4 +50,20 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public Set<Category> getCategories() {
+        return categories;
+    }
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
+    }
+    public Set<ProductModel> getModels() {
+        return models;
+    }
+    public void setModels(Set<ProductModel> models) {
+        this.models = models;
+    }
+
+
+
 }

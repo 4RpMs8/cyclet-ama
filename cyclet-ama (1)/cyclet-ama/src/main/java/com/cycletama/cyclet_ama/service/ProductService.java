@@ -2,6 +2,7 @@ package com.cycletama.cyclet_ama.service;
 
 import java.util.List;
 import com.cycletama.cyclet_ama.entity.Product;
+import com.cycletama.cyclet_ama.entity.ProductModel;
 import com.cycletama.cyclet_ama.exception.ProductNotFoundException;
 import com.cycletama.cyclet_ama.repository.ProductRepository;
 import org.springframework.stereotype.Service;
@@ -32,4 +33,10 @@ public class ProductService {
         existingProduct.setDescription(product.getDescription());
         return productRepository.save(existingProduct);
     }
+
+    public void deleteProduct(Long id) {
+        Product existingProduct = productRepository.findById(id).orElseThrow(() -> new ProductNotFoundException("product not found"));
+        productRepository.delete(existingProduct);
+    }
+
 }

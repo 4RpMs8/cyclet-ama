@@ -1,31 +1,16 @@
-package com.cycletama.cyclet_ama.entity;
-
-
-import jakarta.persistence.*;
+package com.cycletama.cyclet_ama.dto;
 
 import java.math.BigDecimal;
 
-@Entity
-public class ProductModel {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class CreatProductModelRequest {
 
     private String model;
     private String productCode;
-     private BigDecimal pricePerCarton;
-     private Integer stock;
-     private Integer piecesPerCarton;
-     private String status;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private BigDecimal pricePerCarton;
+    private Integer stock;
+    private Integer piecesPerCarton;
+    private String status;
+    private Boolean requestQuote;
 
     public String getModel() {
         return model;
@@ -67,6 +52,14 @@ public class ProductModel {
         this.piecesPerCarton = piecesPerCarton;
     }
 
+    public Boolean getRequestQuote() {
+        return requestQuote;
+    }
+
+    public void setRequestQuote(Boolean requestQuote) {
+        this.requestQuote = requestQuote;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -74,16 +67,4 @@ public class ProductModel {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    @ManyToOne
-    private Product product;
-
 }
