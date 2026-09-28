@@ -1,6 +1,7 @@
 package com.cycletama.cyclet_ama.controller;
 
 
+import com.cycletama.cyclet_ama.dto.ProductDTO;
 import com.cycletama.cyclet_ama.entity.Product;
 import com.cycletama.cyclet_ama.service.ProductService;
 import org.springframework.web.bind.annotation.*;
@@ -15,16 +16,16 @@ public class ProductController {
         this.productService = productService;
     }
     @GetMapping
-    public List<Product> GetAllProducts() {
+    public List<ProductDTO> GetAllProducts() {
         return productService.GetAllProducts();
     }
     @PostMapping
-    public Product createProduct(@RequestBody Product product) {
+    public ProductDTO createProduct(@RequestBody Product product) {
         return productService.createProduct(product);
     }
 
     @GetMapping("/{id}")
-    public Product getProductById(@PathVariable Long id) {
+    public ProductDTO getProductById(@PathVariable Long id) {
         return productService.getProductById(id);
     }
 
