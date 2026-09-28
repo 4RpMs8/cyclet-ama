@@ -38,4 +38,14 @@ public class ProductController {
     public void deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
     }
+
+    @PostMapping("/{productId}/categories/{categoryId}")
+    public void addCategoryToProduct(@PathVariable Long productId, @PathVariable Long categoryId) {
+        productService.addCategoryToProduct(productId, categoryId);
+    }
+
+    @DeleteMapping("/{productId}/categories/{categoryId}")
+    public void removeCategoryFromProduct(@PathVariable Long productId, @PathVariable Long categoryId) {
+        productService.removeCategoryFromProduct(productId, categoryId);
+    }
 }
