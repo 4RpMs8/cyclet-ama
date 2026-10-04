@@ -21,7 +21,7 @@ public class OrderService {
         return productModel.getPricePerCarton().multiply(new BigDecimal(orderItem.getQuantity()));
     }
 
-    public OrderService(OrderRepository orderRepository, ProductModelRepository productModelRepository, OrderStatus orderStatus, PaymentStatus paymentStatus) {
+    public OrderService(OrderRepository orderRepository, ProductModelRepository productModelRepository) {
         this.orderRepository = orderRepository;
         this.productModelRepository = productModelRepository;
     }
