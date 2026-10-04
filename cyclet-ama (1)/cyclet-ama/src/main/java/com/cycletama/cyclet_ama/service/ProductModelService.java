@@ -7,6 +7,7 @@ import com.cycletama.cyclet_ama.controller.ProductModelController;
 import com.cycletama.cyclet_ama.dto.ProductModelDTO;
 import com.cycletama.cyclet_ama.entity.Product;
 import com.cycletama.cyclet_ama.entity.ProductModel;
+import com.cycletama.cyclet_ama.exception.ProductModelNotFoundException;
 import com.cycletama.cyclet_ama.exception.ProductNotFoundException;
 import com.cycletama.cyclet_ama.mapper.ProductModelMapper;
 import com.cycletama.cyclet_ama.repository.ProductModelRepository;
@@ -52,9 +53,9 @@ public class ProductModelService {
 
     public ProductModelDTO updateProductModel(Long productId , Long modelId , CreatProductModelRequest request) {
         Product product = productRepository.findById(productId).orElseThrow(() -> new ProductNotFoundException("product not found"));
-        ProductModel productModel = productModelRepository.findById(modelId).orElseThrow(() -> new ProductNotFoundException("product model not found"));
+        ProductModel productModel = productModelRepository.findById(modelId).orElseThrow(() -> new ProductModelNotFoundException("product model not found"));
         if(!productModel.getProduct().getId().equals(product.getId())) {
-            throw new ProductNotFoundException("product model does not belong to this product");
+            throw new ProductModelNotFoundException("product model does not belong to this product");
         }
         productModel.setModel(request.getModel());
         productModel.setProductCode(request.getProductCode());
@@ -69,9 +70,9 @@ public class ProductModelService {
 
     public void deleteProductModel(Long productId , Long modelId) {
         Product product = productRepository.findById(productId).orElseThrow(() -> new ProductNotFoundException("product not found"));
-        ProductModel productModel = productModelRepository.findById(modelId).orElseThrow(() -> new ProductNotFoundException("product model not found"));
+        ProductModel productModel = productModelRepository.findById(modelId).orElseThrow(() -> new ProductModelNotFoundException("product model not found"));
         if(!productModel.getProduct().getId().equals(product.getId())) {
-            throw new ProductNotFoundException("product model does not belong to this product");
+            throw new ProductModelNotFoundException("product model does not belong to this product");
         }
         productModelRepository.delete(productModel);
     }

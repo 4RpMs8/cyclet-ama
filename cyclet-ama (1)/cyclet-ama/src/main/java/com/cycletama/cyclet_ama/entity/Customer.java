@@ -1,6 +1,7 @@
 package com.cycletama.cyclet_ama.entity;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 public class Customer {
@@ -14,4 +15,7 @@ public class Customer {
     private String email;
     private String phone;
     private String companyName;
+    @OneToMany(mappedBy = "customer")
+    private List<Order> orders;
+
 }

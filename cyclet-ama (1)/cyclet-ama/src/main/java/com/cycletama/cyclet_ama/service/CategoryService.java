@@ -3,6 +3,7 @@ package com.cycletama.cyclet_ama.service;
 import com.cycletama.cyclet_ama.dto.CategoryDTO;
 import com.cycletama.cyclet_ama.dto.ProductDTO;
 import com.cycletama.cyclet_ama.entity.Category;
+import com.cycletama.cyclet_ama.exception.CategoryNotFoundException;
 import com.cycletama.cyclet_ama.exception.ProductNotFoundException;
 import com.cycletama.cyclet_ama.mapper.CategoryMapper;
 import com.cycletama.cyclet_ama.mapper.ProductMapper;
@@ -36,7 +37,7 @@ public class CategoryService {
     }
 
     public Set<ProductDTO> getProductsByCategoryId(Long categoryId) {
-        Category category = categoryRepository.findById(categoryId).orElseThrow(() -> new ProductNotFoundException("category not found"));
+        Category category = categoryRepository.findById(categoryId).orElseThrow(() -> new CategoryNotFoundException("category not found"));
         return category.getProducts().stream().map(productMapper::toDTO).collect(Collectors.toSet());
     }
 
