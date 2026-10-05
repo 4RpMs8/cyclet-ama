@@ -9,6 +9,8 @@ import com.cycletama.cyclet_ama.repository.ProductModelRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.List;
+import java.util.Set;
 
 @Service
 public class OrderService {
@@ -31,10 +33,12 @@ public class OrderService {
         order.setStatus(OrderStatus.PENDING);
         order.setPaymentStatus(PaymentStatus.UNPAID);
         for(OrderItem item: order.getOrderItems()){
+            item.setProductModel(productModelRepository.findById(item.getProductModel().getId()).orElseThrow(() -> new ProductModelNotFoundException("Product model not found")));
             BigDecimal total = calculateTotal(item);
             item.setUnitPrice(productModelRepository.findById(item.getProductModel().getId()).orElseThrow(()-> new ProductModelNotFoundException("product model not found")).getPricePerCarton());
             item.setTotalPrice(total);
             totalAmount = totalAmount.add(total);
+            item.setOrder(order);
         }
         order.setTotalAmount(totalAmount);
         return orderRepository.save(order);
@@ -42,5 +46,13 @@ public class OrderService {
 
     public Order findOrderById(Long id) {
         return orderRepository.findById(id).orElseThrow(()-> new OrderNotFoundException("Order not found"));
+    }
+
+    public List<Order> getAllOrders() {
+        return orderRepository.findAll();
+    }
+
+    public List<Order> findOrdersByCustomerId(Long customerId) {
+        return orderRepository.findOrderByCustomerId(customerId);
     }
 }

@@ -13,4 +13,22 @@ public class GlobalExceptionHandler {
     public String handleProductNotFound(ProductNotFoundException ex) {
         return ex.getMessage();
     }
+
+    @ExceptionHandler(OrderNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String handleOrderNotFound(OrderNotFoundException ex) {
+        return ex.getMessage();
+    }
+
+    @ExceptionHandler(ProductModelNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String handleProductModelNotFound(OrderNotFoundException ex) {
+        return ex.getMessage();
+    }
+
+    @ExceptionHandler(CategoryNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String handleCategoryNotFound(OrderNotFoundException ex) {
+        return ex.getMessage();
+    }
 }
