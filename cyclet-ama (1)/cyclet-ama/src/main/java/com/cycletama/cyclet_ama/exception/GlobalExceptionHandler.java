@@ -31,4 +31,10 @@ public class GlobalExceptionHandler {
     public String handleCategoryNotFound(OrderNotFoundException ex) {
         return ex.getMessage();
     }
+
+    @ExceptionHandler(CustomerNotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public String handleCustomerNotFound(OrderNotFoundException ex) {
+        return ex.getMessage();
+    }
 }
